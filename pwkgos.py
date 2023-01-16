@@ -10,7 +10,7 @@ window.title("Password Generator")
 # Create a function to generate the password
 def generate_password():
   # Set the length of the password
-  password_length = 16
+  password_length = int(password_entry.get())
 
   # Create an empty list to store the characters of the password
   password_chars = []
@@ -39,6 +39,11 @@ def copy_password():
 # Create a label to display the password
 password_label = tk.Label(window, text="")
 password_label.pack()
+
+# Create a label to display the password
+password_entry = tk.Entry(window)
+password_entry.insert([0],'8')
+password_entry.pack()
 
 # Create a button to generate a new password
 generate_button = tk.Button(window, text="Generate Password", command=lambda: password_label.config(text=generate_password()))
