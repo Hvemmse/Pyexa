@@ -40,7 +40,7 @@ def copy_password():
 password_label = tk.Label(window, text="")
 password_label.pack()
 
-# Create a label to display the password
+# Create a entry for password length
 password_entry = tk.Entry(window)
 password_entry.insert([0],'8')
 password_entry.pack()
